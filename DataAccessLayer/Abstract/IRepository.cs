@@ -10,11 +10,13 @@ namespace DataAccessLayer.Abstract
    public interface IRepository<T>
     {
         List<T> List();
+
+        T Get(Expression<Func<T, bool>> filter);
         void Insert(T p);
         void Delete(T p);
         void Update(T p);
 
-        List<T> SartliListe(Expression<Func<T, bool>> filter);
+        List<T> List(Expression<Func<T, bool>> filter);
 
     }
 }
