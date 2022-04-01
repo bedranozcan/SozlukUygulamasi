@@ -6,7 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 namespace DataAccessLayer.Abstract
 {
-    public interface IWirterDal : IRepository<Writer>
+    public interface IWriterDal : IRepository<Writer>
     {
+
     }
 }

@@ -57,7 +57,7 @@
     <Compile Include="Abstract\IContentDal.cs" />
     <Compile Include="Abstract\IHeadingDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
-    <Compile Include="Abstract\IWirterDal.cs" />
+    <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
@@ -70,6 +70,14 @@
     <Compile Include="Migrations\202203201046257_mig1.cs" />
     <Compile Include="Migrations\202203201046257_mig1.designer.cs">
       <DependentUpon>202203201046257_mig1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204011936015_mig_writer_edit.cs" />
+    <Compile Include="Migrations\202204011936015_mig_writer_edit.designer.cs">
+      <DependentUpon>202204011936015_mig_writer_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204012027383_mig_writer_title_add.cs" />
+    <Compile Include="Migrations\202204012027383_mig_writer_title_add.designer.cs">
+      <DependentUpon>202204012027383_mig_writer_title_add.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,6 +95,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202203201046257_mig1.resx">
       <DependentUpon>202203201046257_mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204011936015_mig_writer_edit.resx">
+      <DependentUpon>202204011936015_mig_writer_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204012027383_mig_writer_title_add.resx">
+      <DependentUpon>202204012027383_mig_writer_title_add.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
