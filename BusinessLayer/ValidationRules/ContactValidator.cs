@@ -16,8 +16,7 @@ namespace BusinessLayer.ValidationRules
             RuleFor(x => x.Subject).NotEmpty().WithMessage("Konuyu boş geçemezsiniz.");
             RuleFor(x => x.UserName).NotEmpty().WithMessage("İsim alanını boş bırakamazsınız");
             RuleFor(x => x.Subject).MinimumLength(3).WithMessage("En az 3 karakter girişi yapabilirsiniz.");
-            RuleFor(x => x.Subject).MinimumLength(50).WithMessage("En fazla 50 karakter girişi yapabilirsiniz.");
-            RuleFor(x => x.UserName).MaximumLength(2).WithMessage("Lütfen en az 2 karakter girişi yapın.");         
+            RuleFor(x => x.Subject).MaximumLength(100).WithMessage("Lütfen en fazla 100 karakter girişi yapın.");         
         }
     }
 }
