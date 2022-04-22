@@ -51,7 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IAbilityDal.cs" />
     <Compile Include="Abstract\IAboutDal.cs" />
+    <Compile Include="Abstract\IAdminDal.cs" />
     <Compile Include="Abstract\ICategoryDal.cs" />
     <Compile Include="Abstract\IContactDal.cs" />
     <Compile Include="Abstract\IContentDal.cs" />
@@ -59,17 +61,21 @@
     <Compile Include="Abstract\IImageFileDal.cs" />
     <Compile Include="Abstract\IMessageDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Abstract\ISkillDal.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
+    <Compile Include="EntityFramework\EfAbilityDal.cs" />
     <Compile Include="EntityFramework\EfAboutDal.cs" />
+    <Compile Include="EntityFramework\EfAdminDal.cs" />
     <Compile Include="EntityFramework\EfCategoryDal.cs" />
     <Compile Include="EntityFramework\EfContactDal.cs" />
     <Compile Include="EntityFramework\EfContentDal.cs" />
     <Compile Include="EntityFramework\EfHeadingDal.cs" />
     <Compile Include="EntityFramework\EfImageFileDal.cs" />
     <Compile Include="EntityFramework\EfMessageDal.cs" />
+    <Compile Include="EntityFramework\EfSkillDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="Migrations\202203201046257_mig1.cs" />
     <Compile Include="Migrations\202203201046257_mig1.designer.cs">
@@ -114,6 +120,26 @@
     <Compile Include="Migrations\202204181251477_mid_admin_table.cs" />
     <Compile Include="Migrations\202204181251477_mid_admin_table.designer.cs">
       <DependentUpon>202204181251477_mid_admin_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204221123514_mig_updated_messages.cs" />
+    <Compile Include="Migrations\202204221123514_mig_updated_messages.designer.cs">
+      <DependentUpon>202204221123514_mig_updated_messages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204221153072_add_contact_updated.cs" />
+    <Compile Include="Migrations\202204221153072_add_contact_updated.designer.cs">
+      <DependentUpon>202204221153072_add_contact_updated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204221321486_add_adminhashadd.cs" />
+    <Compile Include="Migrations\202204221321486_add_adminhashadd.designer.cs">
+      <DependentUpon>202204221321486_add_adminhashadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204221845361_add_about_status.cs" />
+    <Compile Include="Migrations\202204221845361_add_about_status.designer.cs">
+      <DependentUpon>202204221845361_add_about_status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204221914229_add_skillandability.cs" />
+    <Compile Include="Migrations\202204221914229_add_skillandability.designer.cs">
+      <DependentUpon>202204221914229_add_skillandability.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -161,6 +187,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202204181251477_mid_admin_table.resx">
       <DependentUpon>202204181251477_mid_admin_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204221123514_mig_updated_messages.resx">
+      <DependentUpon>202204221123514_mig_updated_messages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204221153072_add_contact_updated.resx">
+      <DependentUpon>202204221153072_add_contact_updated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204221321486_add_adminhashadd.resx">
+      <DependentUpon>202204221321486_add_adminhashadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204221845361_add_about_status.resx">
+      <DependentUpon>202204221845361_add_about_status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204221914229_add_skillandability.resx">
+      <DependentUpon>202204221914229_add_skillandability.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

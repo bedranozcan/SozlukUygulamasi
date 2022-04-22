@@ -46,9 +46,3 @@ namespace DataAccessLayer.Concrete.Repositories
         }
     }
 }
-/*
- * ToList   
- * Add  
- * Remove   
- * Find 
- */

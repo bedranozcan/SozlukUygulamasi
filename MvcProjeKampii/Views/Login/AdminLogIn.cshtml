@@ -1,0 +1,77 @@
+﻿@model EntityLayer.Dto.AdminLogInDto
+@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <title>| Admin Giriş</title>
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="~/AdminLTE-3.0.4/login-form-19/css/style.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <h1 id="title" class="hidden"><span id="logo">Admin Giriş <span>Paneli</span></span></h1>
+        </div>
+        <div class="login-box animated fadeInUp">
+            <div class="box-header">
+                <h2>Giriş Yap</h2>
+            </div>
+            @using (Html.BeginForm("AdminLogIn", "LogIn", FormMethod.Post))
+            {
+<div class="form-group">
+    <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-user"></span></div>
+    <input type="text" class="form-control" name="AdminMail" placeholder="Admin Mail " required>
+</div>
+                <div class="form-group">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-lock"></span></div>
+                    <input type="password" class="form-control" name="AdminPassword" placeholder="Parola" required>
+                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn form-control btn-primary rounded submit px-3">Giriş Yap</button>
+                                </div>            }
+            <br />
+            <div class="w-100 text-center mb-4 text">
+                <div class="w-100 text-center mt-4 text">
+                    <a href="/Home/HomePage" class="btn btn-info" style="color:saddlebrown"><b>Ana Sayfaya Dön</b></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+
+
+<script type="text/javascript">$(document).ready(function () {
+        $('#logo').addClass('animated fadeInDown');
+        $("input:text:visible:first").focus();
+    });
+    $('#username').focus(function () {
+        $('label[for="username"]').addClass('selected');
+    });
+    $('#username').blur(function () {
+        $('label[for="username"]').removeClass('selected');
+    });
+    $('#password').focus(function () {
+        $('label[for="password"]').addClass('selected');
+    });
+    $('#password').blur(function () {
+        $('label[for="password"]').removeClass('selected');
+    });</script>

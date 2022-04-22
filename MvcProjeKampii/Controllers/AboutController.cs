@@ -35,5 +35,19 @@ namespace MvcProjeKampii.Controllers
 
             return PartialView();
         }
+        public ActionResult IsActive(int id)
+        {
+            var aboutValue = abm.GetByID(id);
+            if (aboutValue.Status)
+            {
+                aboutValue.Status = false;
+            }
+            else
+            {
+                aboutValue.Status = true;
+            }
+            abm.AboutUpdate(aboutValue);
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -23,13 +23,48 @@ namespace BusinessLayer.Concrete
             return _messageDal.Get(x => x.MessageID == id);
         }
 
-        public List<Message> GetListInbox()
+        public List<Message> GetListDraft(string session)
         {
-            return _messageDal.List(x => x.ReceiverMail == "admin@gmail.com");
+            return _messageDal.List(x => x.IsDraft == true && x.SenderMail == session);
         }
-        public List<Message> GetListSendbox()
+
+        public List<Message> GetListImportant(string session)
         {
-            return _messageDal.List(x => x.SenderMail == "admin@gmail.com");
+            return _messageDal.List(x => x.IsImportant == true && x.ReceiverMail == session);
+        }
+
+        public List<Message> GetListInbox(string session)
+        {
+            return _messageDal.List(x => x.ReceiverMail == session);
+        }
+        public List<Message> GetListSendbox(string session)
+        {
+            return _messageDal.List(x => x.SenderMail == session);
+        }
+
+        public List<Message> GetListSpam(string session)
+        {
+            return _messageDal.List(x => x.IsSpam == true && x.ReceiverMail == session);
+        }
+
+        public List<Message> GetListTrash()
+        {
+            return _messageDal.List(x => x.Trash == true);
+        }
+
+        public List<Message> GetReadList(string session)
+        {
+            return _messageDal.List(x => x.IsRead == true && x.ReceiverMail == session);
+        }
+
+        public List<Message> GetUnReadList(string session)
+        {
+            return _messageDal.List(x => x.ReceiverMail == session && x.IsRead == false);
+        }
+
+        public List<Message> IsDraft(string session)
+        {
+            return _messageDal.List(x => x.IsDraft == true && x.SenderMail == session);
         }
 
         public void MessageAdd(Message message)
@@ -39,12 +74,12 @@ namespace BusinessLayer.Concrete
 
         public void MessageDelete(Message message)
         {
-            throw new NotImplementedException();
+            _messageDal.Delete(message);
         }
 
         public void MessageUpdate(Message message)
         {
-            throw new NotImplementedException();
+            _messageDal.Update(message);
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿<button class="btn btn-primary" data-toggle="modal" data-target="#Modal1">
+﻿@using EntityLayer.Concrete
+@model About
+<button class="btn btn-primary" data-toggle="modal" data-target="#Modal1">
     Yeni Hakkımızda Yazı Girişi
 </button>
 <div class="modal" id="Modal1">
@@ -20,6 +22,12 @@
                     <br />
                     <label>Hakkımda Görsel 2</label>
                     <input type="text" name="AboutImage2" class="form-control" />
+                    <label>Durumu : </label>
+                    @Html.DropDownListFor(x => x.Status, new SelectListItem[]{
+                        new SelectListItem() {Text = " Aktif ", Value="true"},
+                        new SelectListItem() {Text = " Pasif ", Value="false"}})
+                    <br />
+                    <br />
                     <br />
                     <button class="btn btn-info">Kaydet</button>
                 </div>
