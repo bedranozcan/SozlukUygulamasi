@@ -16,6 +16,7 @@ namespace MvcProjeKampii.Controllers
     public class LoginController : Controller
 
     {
+      
 
         IAuthService authService = new AuthManager(new AdminManager(new EfAdminDal()), new WriterManager(new EfWriterDal()));
         //WriterLoginManager wm = new WriterLoginManager(new EfWriterDal());

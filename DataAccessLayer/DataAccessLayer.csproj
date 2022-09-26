@@ -141,6 +141,10 @@
     <Compile Include="Migrations\202204221914229_add_skillandability.designer.cs">
       <DependentUpon>202204221914229_add_skillandability.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202204240954439_mig_admin1_table.cs" />
+    <Compile Include="Migrations\202204240954439_mig_admin1_table.designer.cs">
+      <DependentUpon>202204240954439_mig_admin1_table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -202,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202204221914229_add_skillandability.resx">
       <DependentUpon>202204221914229_add_skillandability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204240954439_mig_admin1_table.resx">
+      <DependentUpon>202204240954439_mig_admin1_table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

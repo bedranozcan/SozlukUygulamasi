@@ -17,7 +17,7 @@ namespace MvcProjeKampii.Controllers
         MessageValidator messagevalidator = new MessageValidator();
         
 
-        [Authorize]
+        //[Authorize]
         public ActionResult Inbox(int? page)
         {
             string session = (string)Session["AdminMail"];

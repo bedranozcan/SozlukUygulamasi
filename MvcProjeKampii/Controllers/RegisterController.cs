@@ -12,6 +12,7 @@ namespace MvcProjeKampii.Controllers
 {
     public class RegisterController : Controller
     {
+       
         // GET: Register
         IAuthService authService = new AuthManager(
            new AdminManager(new EfAdminDal()), new WriterManager(new EfWriterDal()));
@@ -32,27 +33,27 @@ namespace MvcProjeKampii.Controllers
 
 
 
-        [HttpGet]
-        public ActionResult WriterRegister()
-        {
-            return View();
-        }
+        //[HttpGet]
+        //public ActionResult WriterRegister()
+        //{
+        //    return View();
+        //}
 
-        [HttpPost]
-        public ActionResult WriterRegister(WriterLogInDto writerLogInDto)
-        {
-            authService.WriterRegister(
-                 writerLogInDto.WriterName,
-                 writerLogInDto.WriterSurname,
-                 writerLogInDto.WriterAbout,
-                 writerLogInDto.Title,
-                 //writerLogInDto.WriterImage,
-                 writerLogInDto.WriterMail,
-                 writerLogInDto.WriterPassword,
-                 writerLogInDto.WriterStatus = true
-                 );
-            //return RedirectToAction("MyContent", "WriterPanelContent");
-            return RedirectToAction("MyContent", "WriterPanelContent");
-        }
+        //[HttpPost]
+        //public ActionResult WriterRegister(WriterLogInDto writerLogInDto)
+        //{
+        //    authService.WriterRegister(
+        //         writerLogInDto.WriterName,
+        //         writerLogInDto.WriterSurname,
+        //         writerLogInDto.WriterAbout,
+        //         writerLogInDto.Title,
+        //         //writerLogInDto.WriterImage,
+        //         writerLogInDto.WriterMail,
+        //         writerLogInDto.WriterPassword,
+        //         writerLogInDto.WriterStatus = true
+        //         );
+        //    //return RedirectToAction("MyContent", "WriterPanelContent");
+        //    return RedirectToAction("MyContent", "WriterPanelContent");
+        //}
     }
 }
