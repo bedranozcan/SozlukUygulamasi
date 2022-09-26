@@ -2,7 +2,7 @@
 @model List<Message>
 @{
     ViewBag.Title = "Sendbox";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
 <!DOCTYPE html>
 <html>
@@ -55,8 +55,8 @@
                                                     <label for="check1"></label>
                                                 </div>
                                             </td>
-                                            <td class="mailbox-star"><a href="/Message/GetSendboxMessageDetails/@item.MessageID "><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="/Message/GetSendboxMessageDetails/@item.MessageID">@item.ReceiverMail</a></td>
+                                            <td class="mailbox-star"><a href="/WriterPanelMessage/GetSendboxMessageDetails/@item.MessageID "><i class="fas fa-star text-warning"></i></a></td>
+                                            <td class="mailbox-name"><a href="/WriterPanelMessage/GetSendboxMessageDetails/@item.MessageID">@item.ReceiverMail</a></td>
                                             <td class="mailbox-subject">
                                                 <b>@item.Subject</b>---@item.MessageContent@*.Substring(0,30)*@
 
@@ -83,5 +83,3 @@
 
 </body>
 </html>
-
-
